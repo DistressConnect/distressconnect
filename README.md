@@ -20,8 +20,9 @@ Project Installation
 5. In application/config/database.php set your database parameters.
 6. In application/config/constant.php file write your MQTT server address in line define    define('MQTT_SERVER', "host.com"); 
 7. In public/assets/js/custom.js set your baseURL :  "", and siteUrl : "http://host.com" in server. If running in localhost then set baseURL:  "/distress_connect", siteUrl: "http://localhost/distress_connect" as per your folder name.
-8. Now browse your project by entering http://localhost/distress_connect or domain name http://host.com  (as per your folder or host name).
-9. You can go to the admin panel by clicking the login menu on the home page. For login 
+8. Place your google map api key in application/views/templates/footer.php and in application/views/templates/site_footer.php 'src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY">'
+9. Now browse your project by entering http://localhost/distress_connect or domain name http://host.com  (as per your folder or host name).
+10. You can go to the admin panel by clicking the login menu on the home page. For login 
 Username : admin@distress.com 
 Password : admin@1a
 
