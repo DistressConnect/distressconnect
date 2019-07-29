@@ -1,6 +1,8 @@
 # Distressconnect
 Distress Connect IoT and Software Code Repository
 
+Presentation PPT File - 
+
 For Web Portal Main Site
 *******************
 Server Requirements
@@ -39,7 +41,7 @@ PHP version 7.0 or newer is recommended. MySQL version 5.7.27
 Project Installation
 1. Clone this folder in /var/www/html folder and rename as per your choice.
 2. Database file is in root path distress_endpoint.sql Upload this database file in mysql.
-3. In database.php set your database parameters.
+3. In connection.php set your database parameters.
 
 Team Distress Connect
 www.distressconnect.com
