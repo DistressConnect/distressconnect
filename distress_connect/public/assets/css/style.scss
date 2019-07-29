@@ -1,0 +1,110 @@
+/**
+ * Distress Connect Admin Template
+ * @version v1.0.0
+ * @link
+ * Copyright (c) 2019  Distress Connect
+ * @Author Team Distress Connect
+ * IBM : CALL FOR CODE 2019 Global Challange
+ */
+
+/**
+theme
+**/
+$theme-colors: (
+  "primary": #7B2430,
+  "warning": #ef6c00,
+  "danger": #95374c,
+  "secondary": #e1b528,
+  "dark":#222,
+);
+$body-color: #000000;
+$font-size-base: .8rem;
+
+//bootstrap version
+@import "../../../public/plugins/ct-bootstrap-4.3.1/scss/bootstrap";
+
+/**
+Custom Class
+**/
+.loader-content{position: fixed; z-index: 9999;top:0; left:0; width:100%; height:100%; background: rgba(255,255,255,.5); display: none;}
+
+.thematic-nav{padding-top: 0; padding-bottom: 0;}
+.thematic-nav .navbar-brand{padding-top: 0; padding-bottom: 0;}
+.thematic-nav .navbar-brand.right{padding-top: 0; padding-bottom: 0; margin-right: 0; margin-left: 1rem;}
+
+.logo-img{display: inline-block; vertical-align: middle; height:65px;}
+.logo-text{ display: inline-block; vertical-align: middle;white-space:initial; line-height: 1.5rem;font-size: 1.3rem; margin-left: 10px;}
+
+.main-screen{min-height:calc(100vh - 115px);}
+
+.alt_row-white-grey{background:white; padding: 1rem 0;}
+.alt_row-white-grey:nth-child(2n+1){background:#f2f2f2;}
+
+.kebab-menu{padding: 0 3px; background: transparent; border:0 none;}
+.kebab-menu:focus{outline: 0 none;}
+.kebab-menu figure {width: 4px;  height: 4px;  border-radius: 4px;  background: grey;  margin: 2px 0;}
+
+.opacity-85{background-color: rgba(255,255,255,.085);}
+
+.e-100 .card{width:100%;}
+
+.list-link li{margin-bottom: 5px;}
+
+.content-label-para{}
+.content-label-para label{color:grey; font-size: 15px;}
+.content-label-para p{color:000; font-size:14px;}
+
+.text-muted-transparent{opacity: .5;}
+
+#map{min-height: calc(100vh - 155px); width:100%;}
+
+/**Full Modal**/
+.modal-full-parent{background: #fff;}
+.modal-full{min-width:100%; margin: 0; position:absolute; overflow: auto; min-height: 100%;}
+.modal-full-parent .modal-content{border:0;}
+/**Full Modal  ends**/
+
+/**cmt-list**/
+.cmt-list{list-style: decimal; padding-left: 20px;}
+.cmt-list li{ border-bottom:solid 1px #ddd; padding: 10px;}
+/**cmt-list  ends ends**/
+
+/**Bootstrap select**/
+.bootstrap-select > .dropdown-toggle{border:solid 1px #ced4da;}
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active{color:#495057;}
+.bootstrap-select > .btn-light{background: #fff;}
+/**Bootstrap select  ends**/
+
+/**Chip info**/
+/*With serial no, view, Multiple Action*/
+.chip-info{list-style: none; margin: 0; padding: 0;}
+.chip-info li{background: #eee; display: inline-block; margin-right: .5rem; margin-bottom: .5rem; line-height: 1rem; border-radius:0.25rem;}
+.chip-info li div{display: inline-block;}
+.chip-info li .data-sl{padding:1rem .5rem; background: #dedede; border-top-left-radius:0.25rem; border-bottom-left-radius:0.25rem;}
+.chip-info li .data-view{padding: 0 .5rem;}
+.chip-info li .data-action{padding-right:.5rem;}
+
+/*Info with one action or material chips*/
+.chips{margin: 0; padding: 0;}
+.chips li{display: inline-block;height: 32px;font-size: 13px;font-weight: 500;color: rgba(0,0,0,0.6);line-height: 32px;padding: 0 12px;border-radius: 16px;background-color: #e4e4e4;margin-bottom: 5px;margin-right: 5px;}
+.chips li > img {float: left;margin: 0 8px 0 -12px;height: 32px;width: 32px;border-radius: 50%;}
+.chips li .close {cursor: pointer;float: right;font-size: 16px;line-height: 32px;padding-left: 8px;}
+/**Chip info ends**/
+
+/**Data Table**/
+table.dataTable > tbody > tr.child span.dtr-title{display: block;}
+table.dataTable.nowrap th, table.dataTable.nowrap td{white-space: inherit;}
+table.dataTable > tbody > tr.child ul.dtr-details{width:100%}
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child::before {top: 5px;height: 20px;width: 20px;border: 0 none;border-radius: 0;box-shadow: 0 0;font-size: 18px;line-height: 20px;background-color: #af272f;}
+/**Data Table ends**/
+
+/**Login page**/
+.half-bg {height: 100vh;background-color: #eee;position: fixed;top: 0;left: 0;right: 0; bottom: 0; z-index: -1;}
+.half-bg .cover {height: 50vh;}
+
+.login{height:100vh;}
+.login-box{width:350px; border-radius: 0;  box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+-webkit-perspective: 800px;
+ perspective: 800px;
+transition: all 0.5s ease-in-out;}
+/**Login page ends**/
