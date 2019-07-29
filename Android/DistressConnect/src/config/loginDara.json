@@ -1,0 +1,55 @@
+{
+    "status": 1,
+    "msg": "Login Success",
+    "data": [
+        {
+            "id": "1",
+            "suffix": "",
+            "hh_id": "204010107155",
+            "fk_district_id": "1",
+            "fk_block_id": "1",
+            "fk_gp_id": "1",
+            "fk_village_id": "1",
+            "name": "Lipi Pradhan",
+            "spouse_name": "Gopala Pradhan",
+            "caste": "2",
+            "status": "1",
+            "fk_shg_id": "9101",
+            "created_by": "1",
+            "created_on": "1558618525",
+            "updated_by": "1",
+            "updated_on": "1558618525",
+            "shg_id": null,
+            "shg_name": null,
+            "village_name": "Bakikamba",
+            "gp_name": "Gressingia",
+            "block_name": "Gudayagiri",
+            "district_name": "Kandhamal"
+        },
+        {
+            "id": "2",
+            "suffix": "",
+            "hh_id": "204010107156",
+            "fk_district_id": "1",
+            "fk_block_id": "1",
+            "fk_gp_id": "1",
+            "fk_village_id": "1",
+            "name": "Subhamani Pradhan",
+            "spouse_name": "Alekha Pradhan",
+            "caste": "2",
+            "status": "1",
+            "fk_shg_id": "9101",
+            "created_by": "1",
+            "created_on": "1558618525",
+            "updated_by": "1",
+            "updated_on": "1558618525",
+            "shg_id": null,
+            "shg_name": null,
+            "village_name": "Bakikamba",
+            "gp_name": "Gressingia",
+            "block_name": "Gudayagiri",
+            "district_name": "Kandhamal"
+        }
+        
+    ]
+}
