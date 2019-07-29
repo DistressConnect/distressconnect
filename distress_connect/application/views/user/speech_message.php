@@ -40,7 +40,7 @@
                                             <input type="submit" name="submit" value="Play">
                                         </form>
                                     </td>
-                                    <td></td>
+                                    <td><button class="tone_analyzer" data-key=<?php echo $key; ?> data-value="<?php echo $single_msg['speech_message']; ?>">Tone</button> <span id="message_<?php echo $key; ?>"></span></td>
 									<td><?php echo $single_msg['created_datetime']; ?></td>
 								</tr>
 						<?php

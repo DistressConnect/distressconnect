@@ -122,6 +122,37 @@ class Service extends CI_Controller
 				endif;
 			break;
 
+			case 'GET_EMOTION_OF_SPEECH_MESSAGE':
+				$message 	= $_GET['message'];
+				header('Content-Type: application/json'); 
+				$accessT 	= 'OPzc-rqNRpBrxQVjJEXuOK7JVsTwDmIJPyU96AVmVWC7';
+				$format 	= 'application/json';
+				$data 		= array("text"=>$message);			
+				$URL		= 'https://gateway-lon.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21';
+				$data_string= json_encode($data,true);
+				$ch 		= curl_init();
+				curl_setopt($ch, CURLOPT_URL,$URL);
+				curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout after 30 seconds
+				curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+				curl_setopt($ch, CURLOPT_USERPWD, "apikey:OPzc-rqNRpBrxQVjJEXuOK7JVsTwDmIJPyU96AVmVWC7");
+				curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+				
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+				//curl_setopt($ch, CURLOPT_VERBOSE, 1);
+				curl_setopt($ch, CURLOPT_POST, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+				$result=curl_exec ($ch);
+				curl_close ($ch);
+				$decoded_result = json_decode($result, true);
+				if(isset($decoded_result['document_tone']['tones'][0]['tone_name']) && !empty($decoded_result['document_tone']['tones'][0]['tone_name'])):
+					echo json_encode(array('status'=>1, 'msg'=>$decoded_result['document_tone']['tones'][0]['tone_name']));
+					exit();
+				else:
+					echo json_encode(array('status'=>0, 'msg'=>'Default'));
+					exit();
+				endif;
+			break;
+
             default:
 				echo json_encode(array('status'=>0, 'msg'=>'Operation failed! Conddtact support team.'));
 				exit(0);

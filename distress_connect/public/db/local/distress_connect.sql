@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 29, 2019 at 08:27 PM
+-- Generation Time: Jul 30, 2019 at 02:03 AM
 -- Server version: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.0.33-8+ubuntu18.04.1+deb.sury.org+1
 
@@ -384,12 +384,7 @@ CREATE TABLE `tbl_node_speech_message` (
 INSERT INTO `tbl_node_speech_message` (`speech_msg_id`, `speech_message`, `node_key`, `created_datetime`) VALUES
 (1, 'Cyclone Will come', 'NODE-7', '2019-07-28 15:16:44'),
 (2, 'Earthquake Started', 'NODE-5', '2019-07-28 15:17:16'),
-(3, 'Flood will come', 'NODE-6', '2019-07-29 18:03:09'),
-(4, 'Huricane alert', 'NODE-6', '2019-07-29 19:13:21'),
-(5, 'Huricane alert', 'NODE-6', '2019-07-29 19:13:54'),
-(6, 'Huricane alert', 'NODE-6', '2019-07-29 19:15:13'),
-(7, 'Huricane alert', 'NODE-6', '2019-07-29 19:15:38'),
-(8, 'Huricane alert', 'NODE-6', '2019-07-29 19:15:50');
+(3, 'Severe Flood entire village washed out, send 10 NDRF Team soon. ', 'NODE-6', '2019-07-29 19:15:50');
 
 -- --------------------------------------------------------
 
@@ -567,7 +562,7 @@ CREATE TABLE `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`user_id`, `fk_role_id`, `username`, `password`, `fullname`, `email`, `phone`, `status`, `address`, `is_password_renew`, `renew_password`, `last_login`, `created_by`, `created_on`, `last_ip_address`, `latitude`, `longitude`, `passkey`, `pincode`) VALUES
-(1, 1, 'admin@distress.com', '2f3e17c29171b5ae19b61170a4308969', 'admin', 'admin@distress.com', '9399393939', 1, 'BBSR', 0, NULL, '1564409414', 1, 16000303003, '192.168.0.104', NULL, NULL, NULL, NULL),
+(1, 1, 'admin@distress.com', '2f3e17c29171b5ae19b61170a4308969', 'admin', 'admin@distress.com', '9399393939', 1, 'BBSR', 0, NULL, '1564431036', 1, 16000303003, '127.0.0.1', NULL, NULL, NULL, NULL),
 (2, 4, 'cdcu1@distress.com', '2f3e17c29171b5ae19b61170a4308969', 'Cdcu', 'cdcu1@distress.com', '9349939399', 1, NULL, 0, NULL, '1564226981', 1, 1563783578, '127.0.0.1', '20.285743', '85.857872', 'CDCU-2', '763635'),
 (4, 3, 'dcu1@distress.com', '493f356defffbdeb29d3291bdf8b4c22', 'Dcu1', 'dcu1@distress.com', '9349939391', 1, NULL, 0, NULL, NULL, 1, 1563792462, '127.0.0.1', '20.295636', '85.841874', 'DCU-4', '763631'),
 (5, 3, 'dcu2@distress.com', '76c4f80455b899aed4f0cfc972e3bba3', 'Dcu2', 'dcu2@distress.com', '9349939388', 1, NULL, 0, NULL, NULL, 1, 1563792495, '127.0.0.1', '20.277876', '85.843403', 'DCU-5', '763631'),
@@ -716,7 +711,7 @@ ALTER TABLE `tbl_node_request_details`
 -- AUTO_INCREMENT for table `tbl_node_speech_message`
 --
 ALTER TABLE `tbl_node_speech_message`
-  MODIFY `speech_msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `speech_msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_node_weather_message`
 --

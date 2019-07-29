@@ -348,6 +348,31 @@ var floatingui = (function(){
 				}
 			});
 
+			et.delegate(".tone_analyzer", "click", function(evt) {
+				var key_val = $(this).attr('data-key');
+				var message = $(this).attr('data-value');
+				$.ajax({
+					type    : 'GET',
+					url     : app.config.baseURL + "/service/get",
+					data    : {'op':'GET_EMOTION_OF_SPEECH_MESSAGE', 'message':message},
+					dataType: 'json',
+					async   : true,
+					success : function(response){
+						if(response.status == 1)
+						{
+							$("#message_"+key_val).html(response.msg);
+						}
+						else
+						{
+							alert(response.msg);
+						}
+					},
+					error: function(x,t,e){
+						console.log(t);
+					}
+				});
+			});
+
 			if ($('#wheather_alert_data_display_cont').length){
 				$.ajax({
 					type    : 'GET',
