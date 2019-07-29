@@ -44,5 +44,12 @@ Project Installation
 2. Database file is in root path distress_endpoint.sql Upload this database file in mysql.
 3. In connection.php set your database parameters.
 
+MOBILE APP
+*******************
+1. Please place your google api key inside Android/DistressConnect/android/app/src/main/AndroidManifest.xml.
+
 Team Distress Connect
 www.distressconnect.com
+
+
+
