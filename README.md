@@ -40,3 +40,6 @@ Project Installation
 1. Clone this repository in /var/www/html folder and rename as per your choice.
 2. Database file is in root path distress_endpoint.sql Upload this database file in mysql.
 3. In database.php set your database parameters.
+
+Team Distress Connect
+www.distressconnect.com
