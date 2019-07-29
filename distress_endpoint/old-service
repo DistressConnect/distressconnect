@@ -1,0 +1,92 @@
+<?php
+    #ini_set("display_errors", 1);
+    include_once('connection.php');
+    header('Content-Type: application/json');
+	header("Access-Control-Allow-Origin: *");
+    if ($_SERVER['REQUEST_METHOD'] === 'GET')
+    {
+        if(isset($_GET['op']) && !empty($_GET['op']))
+        {
+            switch($_GET['op'])
+            {
+                case 'GET_NODE_MESSAGE_DATA':
+                    $messageListQuery   = "SELECT * FROM `node_messages` WHERE 1 ORDER BY 'DESC' LIMIT 10";
+                    $messageListResult	= mysqli_query($con, $messageListQuery);
+            
+                    if($messageListResult->num_rows > 0)
+                    {
+                        $messageResults = mysqli_fetch_assoc($messageListResult);
+                        echo json_encode(array('status'=>1, 'msg'=>$messageResults));
+                        exit(0);
+                    }
+                    else
+                    {
+                        echo json_encode(array('status'=>0, 'msg'=>'No messages found'));
+                        exit(0);
+                    }
+                break;
+
+                case 'GET_NODE_CONCURRENT_MESSAGE_DATA':
+                    $messageListQuery   = "SELECT * FROM `node_messages` WHERE 1 ORDER BY 'DESC' LIMIT 10";
+                    $messageListResult	= mysqli_query($con, $messageListQuery);
+            
+                    if($messageListResult->num_rows > 0)
+                    {
+                        $messageResults = mysqli_fetch_assoc($messageListResult);
+                        echo json_encode(array('status'=>1, 'msg'=>$messageResults));
+                        exit(0);
+                    }
+                    else
+                    {
+                        echo json_encode(array('status'=>0, 'msg'=>'No messages found'));
+                        exit(0);
+                    }
+                break;
+
+                default:
+                    echo json_encode(array('status'=>0, 'msg'=>'Invalid Request'));
+            }
+        }
+        else
+        {
+            echo json_encode(array('status'=>0, 'msg'=>'Invalid Request'));
+            exit(0);
+        }
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        if(isset($_POST['op']) && !empty($_POST['op']))
+        {
+            switch($_POST['op'])
+            {
+                case 'POST_NODE_MESSAGE_DATA':
+                    $node_id        = $_POST['node_id'];
+                    $message        = $_POST['message'];
+                    $message_type   = $_POST['message_type'];
+                    $created_on     = date('Y-m-d');
+                    $query			= "INSERT INTO node_messages (`node_id`, `message`, `message_type`, `created_date`)
+                    VALUES($node_id, '$message', '$message_type', '$created_on')";
+                    if($res         = mysqli_query($con, $query))
+                    {
+                        echo json_encode(array('status'=>1, 'msg'=>'Message successfully logged'));
+                        exit(0);
+                    }
+                    else
+                    {
+                        echo json_encode(array('status'=>0, 'msg'=>'Message not logged'));
+                        exit(0);
+                    }
+                break;
+
+                default:
+                    echo json_encode(array('status'=>0, 'msg'=>'Invalid Request'));
+            }
+        }
+        else
+        {
+            echo json_encode(array('status'=>0, 'msg'=>'Invalid Request'));
+            exit(0);
+        }
+    }
+?>
