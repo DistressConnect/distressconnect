@@ -26,7 +26,7 @@
 		<script src="<?php echo base_url(); ?>public/assets/js/form-validation.js"></script>
 		<script src="<?php echo base_url(); ?>public/assets/js/custom.js"></script>
         <script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9XwPcSffuaHZ3ETrjsR5uCvO7RrkBmZo">
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY">
 		</script>
 	</body>
 </html>
